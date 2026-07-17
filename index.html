@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A vibrant community for artists, writers, musicians, photographers, storytellers, and magazine creators. Discover, connect, and create together.">
+    <meta name="theme-color" content="#F7F6F3">
+    <title>The Collective — A Community for Creators</title>
+
+    <!-- Google Fonts: Playfair Display (headline) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Preconnect to image CDN for faster loads -->
+    <link rel="preconnect" href="https://picsum.photos">
+    <link rel="preconnect" href="https://fastly.picsum.photos" crossorigin>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="hero">
+
+        <!-- Subtle background grain texture (CSS-generated) -->
+        <div class="hero__grain" aria-hidden="true"></div>
+
+        <!-- Central content block -->
+        <div class="hero__content" id="hero-content">
+            <p class="hero__eyebrow">The Paperweight Community</p>
+            <h1 class="hero__title">
+                <span class="hero__title-line">Where Creators</span>
+                <span class="hero__title-line hero__title-line--accent">Come Alive</span>
+            </h1>
+            <p class="hero__description">
+                A home for artists, writers, musicians, photographers, storytellers,
+                and magazine creators. Move your cursor to unveil the gallery.
+            </p>
+            <div class="hero__actions">
+                <a href="#" id="join-btn" class="hero__btn hero__btn--primary" role="button">
+                    Join the Community
+                    <span class="hero__btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#community-info" id="explore-btn" class="hero__btn hero__btn--ghost" role="button">
+                    Explore Works
+                </a>
+            </div>
+        </div>
+
+        <!-- Container for the cursor-following image trail -->
+        <div id="image-trail" class="image-trail" aria-hidden="true"></div>
+
+        <!-- Mobile hint (touch devices) -->
+        <p class="hero__mobile-hint" id="mobile-hint">
+            Tap &amp; drag to reveal artwork
+        </p>
+    </section>
+
+
+    <!-- ===== SECTION 2 — TOP CONTRIBUTORS ===== -->
+    <section id="contributors" class="contributors section">
+        <div class="section__inner">
+            <h2 class="contributors__heading reveal">
+                These are our <span class="contributors__heading-accent">Top Contributors</span>
+            </h2>
+            <hr class="contributors__divider reveal" />
+            <p class="contributors__text reveal">
+                Every masterpiece begins with a single stroke. Our top contributors are the visionaries 
+                who pour their passion into this community — from breathtaking illustrations and soul-stirring 
+                poetry to captivating photography and boundary-pushing music. They inspire us daily and 
+                remind us that creativity, when shared, becomes something far greater than itself.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ===== SECTION 3 — 3D ARTWORK CAROUSEL ===== -->
+    <section id="showcase" class="showcase">
+        <!-- Tall scroll area: height handled by CSS to give scroll room -->
+        <div class="carousel-scroll-area" id="carousel-scroll-area">
+            <!-- Sticky viewport stays centered while user scrolls -->
+            <div class="carousel-viewport" id="carousel-viewport">
+                <h2 class="showcase__heading reveal">
+                    A Glimpse of <span class="showcase__heading-accent">Our Creations</span>
+                </h2>
+
+                <div class="carousel-3d" id="carousel-3d">
+                    <!-- Card 1 -->
+                    <div class="carousel-card" data-index="0">
+                        <div class="carousel-card__image">
+                            <img src="images2/art1.jpg" alt="Abstract Dawn" class="carousel-card__img" loading="lazy">
+                        </div>
+                        <div class="carousel-card__info">
+                            <p class="carousel-card__title">Abstract Dawn</p>
+                            <p class="carousel-card__desc">Oil on canvas</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="carousel-card" data-index="1">
+                        <div class="carousel-card__image">
+                            <img src="images2/art2.jpg" alt="City Lights" class="carousel-card__img" loading="lazy">
+                        </div>
+                        <div class="carousel-card__info">
+                            <p class="carousel-card__title">City Lights</p>
+                            <p class="carousel-card__desc">Photography</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="carousel-card" data-index="2">
+                        <div class="carousel-card__image">
+                            <img src="images2/art3.jpg" alt="Whispered Verse" class="carousel-card__img" loading="lazy">
+                        </div>
+                        <div class="carousel-card__info">
+                            <p class="carousel-card__title">Whispered Verse</p>
+                            <p class="carousel-card__desc">Poetry</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="carousel-card" data-index="3">
+                        <div class="carousel-card__image">
+                            <img src="images2/art4.jpg" alt="Echoes" class="carousel-card__img" loading="lazy">
+                        </div>
+                        <div class="carousel-card__info">
+                            <p class="carousel-card__title">Echoes</p>
+                            <p class="carousel-card__desc">Music</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="carousel-card" data-index="4">
+                        <div class="carousel-card__image">
+                            <img src="images2/art5.jpg" alt="Serene Bloom" class="carousel-card__img" loading="lazy">
+                        </div>
+                        <div class="carousel-card__info">
+                            <p class="carousel-card__title">Serene Bloom</p>
+                            <p class="carousel-card__desc">Digital art</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="carousel-card" data-index="5">
+                        <div class="carousel-card__image">
+                            <img src="images2/art6.jpg" alt="Lost Chapter" class="carousel-card__img" loading="lazy">
+                        </div>
+                        <div class="carousel-card__info">
+                            <p class="carousel-card__title">Lost Chapter</p>
+                            <p class="carousel-card__desc">Short story</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="carousel-card" data-index="6">
+                        <div class="carousel-card__image">
+                            <img src="images2/art7.jpg" alt="Duality" class="carousel-card__img" loading="lazy">
+                        </div>
+                        <div class="carousel-card__info">
+                            <p class="carousel-card__title">Duality</p>
+                            <p class="carousel-card__desc">Mixed media</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="carousel-card" data-index="7">
+                        <div class="carousel-card__image">
+                            <img src="images2/art8.jpg" alt="Golden Hour" class="carousel-card__img" loading="lazy">
+                        </div>
+                        <div class="carousel-card__info">
+                            <p class="carousel-card__title">Golden Hour</p>
+                            <p class="carousel-card__desc">Photography</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll hint -->
+                <p class="carousel-hint" id="carousel-hint">Scroll to explore artworks</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FINAL SECTION — COMMUNITY INFORMATION ===== -->
+    <section id="community-info" class="community section">
+        <div class="community__inner">
+
+            <!-- About -->
+            <div class="community__about">
+                <h2 class="community__heading reveal">
+                    About Our <span class="community__heading-accent">Community</span>
+                </h2>
+                <hr class="community__divider reveal" />
+                <p class="community__text reveal">
+                    The Collective is a vibrant creative sanctuary where artists, writers, musicians, 
+                    photographers, and storytellers come together to share their work, find inspiration, 
+                    and grow alongside one another. We believe that creativity flourishes in community.
+                </p>
+                <p class="community__text reveal">
+                    Our mission is simple: to nurture emerging talent, celebrate diverse art forms, 
+                    and build a supportive space where every creator — from first-time doodlers to 
+                    seasoned professionals — feels at home.
+                </p>
+                <p class="community__text reveal">
+                    Whether you're looking for feedback on your latest piece, collaborators for a 
+                    passion project, or simply a place that understands the creative journey — 
+                    you'll find your people here.
+                </p>
+            </div>
+
+            <!-- Daily Schedule -->
+            <div class="schedule">
+                <h3 class="schedule__heading reveal">Daily Schedule</h3>
+                <div class="schedule__timeline reveal-stagger">
+                    <div class="schedule__item reveal">
+                        <p class="schedule__day">Monday</p>
+                        <p class="schedule__activity">Visual Art Showcase — Share paintings, illustrations &amp; digital art</p>
+                    </div>
+                    <div class="schedule__item reveal">
+                        <p class="schedule__day">Tuesday</p>
+                        <p class="schedule__activity">Writing Workshop — Poetry, prose &amp; creative writing prompts</p>
+                    </div>
+                    <div class="schedule__item reveal">
+                        <p class="schedule__day">Wednesday</p>
+                        <p class="schedule__activity">Photography Hour — Photo walks, editing tips &amp; critiques</p>
+                    </div>
+                    <div class="schedule__item reveal">
+                        <p class="schedule__day">Thursday</p>
+                        <p class="schedule__activity">Music &amp; Audio — Original compositions, covers &amp; sound design</p>
+                    </div>
+                    <div class="schedule__item reveal">
+                        <p class="schedule__day">Friday</p>
+                        <p class="schedule__activity">Collaboration Day — Find partners for cross-medium projects</p>
+                    </div>
+                    <div class="schedule__item reveal">
+                        <p class="schedule__day">Saturday</p>
+                        <p class="schedule__activity">Magazine Feature — Spotlight on community members &amp; their stories</p>
+                    </div>
+                    <div class="schedule__item reveal">
+                        <p class="schedule__day">Sunday</p>
+                        <p class="schedule__activity">Open Studio — Free-form sharing, feedback &amp; casual hangout</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Join Community CTA -->
+            <div class="community__cta reveal">
+                <a href="https://chat.whatsapp.com/FEUPWPKfhEM8HCcdIgToPQ?s=cl&p=i&ilr=0" 
+                   id="join-btn-bottom" 
+                   class="community__join-btn" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   role="button">
+                    Join the Community
+                    <span class="community__join-arrow" aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social reveal">
+                <p class="social__label">Follow Us</p>
+                <a href="https://www.instagram.com/thepaper.weight?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                   id="instagram-link"
+                   class="social__link" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <circle cx="12" cy="12" r="5"/>
+                        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+                    </svg>
+                    @thepaper.weight
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FOOTER NOTE ===== -->
+    <footer class="footer-note">
+        <p class="footer-note__text">
+            Made with <span class="accent">♥</span> by thepaper.weight
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
